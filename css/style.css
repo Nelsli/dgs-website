@@ -1,0 +1,72 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	height: 2000px;
+}
+
+
+/* General */
+
+.main-content {
+	position: absolute;
+	/* Header height - padding for first heading */
+	top: 400px;
+	left: 0px;
+	width: 100%;
+}
+
+.new-section {
+	margin-top: 50px;
+}
+
+h2,
+h3 {
+	text-align: center;
+}
+
+h1 {
+	text-align: left;
+	font-size: 60px;
+	position: absolute;
+	bottom: 5%;
+}
+
+#about-us,
+#services,
+#contact {
+	padding-top: 150px;
+}
+
+/* Navigation */
+
+.navbar {
+	height: 500px;
+}
+
+nav.navbar {
+	min-height: 100px;
+	background-color: #bada55;
+	/* Animation  settings */
+	-webkit-transition: all 0.05s ease;
+	transition: all 0.05s ease;
+}
+
+.collapse.in {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+
+
+
+
+
+
+
+/*
+.person-pic {
+	width: 30%;
+	max-width: 150px;
+	margin-left: 5px;
+}*/
