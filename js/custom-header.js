@@ -1,39 +1,30 @@
 var getHeight = $(".navbar").css("height");
 getHeight = getHeight.replace("px", "");
 
-var h1Size = $("#nav-header").css("font-size");
-//h1Size = h1Size.replace("px", "");
+var headerH1Size = $("#nav-header").css("font-size");
+var headerH1Number = headerH1Size.replace("em", "");
 
-$("#nav-header").css("top", "190px");
 
 //Set to scroll to top on refresh
 $(window).on('beforeunload', function () {
 	$(window).scrollTop(0);
 });
 
-//Shrinks header on scroll and repositions text
-$(window).scroll(function () {
+
+// Resizes header and text upon scroll
+$(window).scroll(function() {
+	//Sizes header
 	var scrollTop = $(document).scrollTop();
 	var calcHeight = getHeight - scrollTop;
-	var h1Position = 0.5 * calcHeight;
-	
-	if (h1Position <= 0) {
-		$("#nav-header").css("top", "0px");
-	} else {
-		$("#nav-header").css("top", h1Position + "px");
-	}
 	$(".shrink").css("height", calcHeight);
-	
-	if (calcHeight < 200) { 
-		h1Size = $("#nav-header").css("font-size", "40px");
+
+	//Changes parent font-size of #nav-header
+	if (calcHeight > 210) {
+		$("#nav-header-container").css("font-size", "14px")
 	} else {
-		h1Size = $("#nav-header").css("font-size", "60px")
+		$("#nav-header-container").css("font-size", "8px");
 	}
 });
-
-
-
-
 
 //Smooth scrolling
 $(function () {

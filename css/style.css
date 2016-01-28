@@ -14,7 +14,8 @@ body {
 	/* Header height - padding for first heading */
 	top: 400px;
 	left: 0px;
-	width: 100%;
+	width: 96%;
+	margin: 0 2%;
 }
 
 .new-section {
@@ -24,13 +25,6 @@ body {
 h2,
 h3 {
 	text-align: center;
-}
-
-h1 {
-	text-align: left;
-	font-size: 60px;
-	position: absolute;
-	bottom: 5%;
 }
 
 #about-us,
@@ -57,16 +51,28 @@ nav.navbar {
 	background-color: rgba(255, 255, 255, 0.2);
 }
 
+#nav-header-container {
+	position: absolute;
+	top: 0;
+	left: 25px;
+	height: 100%;
+	width: 80%;
+  display: table; 
+}
+
+#nav-header {
+  display: table-cell; 
+  vertical-align: middle; 
+	font-size: 5em;
+/*	animation-timing-function: ease-in;*/
+	transition: all 0.5s ease;
+}
 
 
 
-
-
-
-
-/*
+/* About Us */
 .person-pic {
-	width: 30%;
-	max-width: 150px;
-	margin-left: 5px;
-}*/
+	margin: auto;
+	margin-top: 18px;
+	max-width: 140px;
+}
