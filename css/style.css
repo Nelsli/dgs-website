@@ -3,9 +3,8 @@
 }
 
 body {
-	height: 2000px;
+	height: 2500px;
 }
-
 
 /* General */
 
@@ -33,7 +32,9 @@ h3 {
 	padding-top: 150px;
 }
 
-/* Navigation */
+/******************************
+Navigation
+******************************/
 
 .navbar {
 	height: 500px;
@@ -41,38 +42,128 @@ h3 {
 
 nav.navbar {
 	min-height: 100px;
-	background-color: #bada55;
+	background-color: #d4e896;
+/*		#ddedab;*/
+/*		#e5f1c0;*/
+	border-bottom: 1px solid #d4e896;
+	box-shadow: 0 0px 4px #7B9B18;
 	/* Animation  settings */
 	-webkit-transition: all 0.05s ease;
 	transition: all 0.05s ease;
 }
 
-.collapse.in {
-	background-color: rgba(255, 255, 255, 0.2);
-}
 
+/* Logo *********************************/
 #nav-header-container {
 	position: absolute;
 	top: 0;
 	left: 25px;
 	height: 100%;
-	width: 80%;
-  display: table; 
+	width: 100%;
+	max-width: 960px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
 #nav-header {
-  display: table-cell; 
-  vertical-align: middle; 
-	font-size: 5em;
-/*	animation-timing-function: ease-in;*/
-	transition: all 0.5s ease;
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 100px;
+	position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#nav-menu a {
+	font-size: 1.2em;
+	color: rgb(69, 69, 68);
 }
 
 
+/* Collapsing Nav **************************/
+
+.navbar ul li, .navbar button, .collapse.in {
+	z-index: 999;
+}
+
+.collapse.in, 
+.navbar-collapse.collapsing {
+	background-color: rgba(247, 229, 255, .8);
+	position: relative;
+	border-bottom-right-radius: 20px;
+	z-index: 999;
+	overflow: hidden;
+}
+
+.collapse.in li, 
+.navbar-collapse.collapsing li{
+	text-align: center;
+	font-size: 1.5em;
+	padding: 10px;
+}
+
+.navbar-collapse.collapsing {
+  -webkit-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  -ms-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  transition: height 0.5s;
+	overflow: hidden;
+}
+
+.collapse.in ul, 
+.navbar-collapse.collapsing ul  {
+	padding: 50px 0;
+}
+
+.collapse.in li:hover {
+	background-color: rgba(205, 95, 255, .1);
+}
+
+#nav-btn:hover {
+	background-color: rgba(205, 95, 255, .3);
+}
+
+#nav-btn, #nav-btn:focus {
+	background-color: rgba(247, 229, 255, .8);
+}
+
+#nav-btn:active {
+	background-color: rgba(205, 95, 255, .3);
+}
+
+.hide-until-click {
+	display: none !important;
+}
+
+.collapse.in .hide-until-click {
+	display: block !important;
+	color: red;
+}
+
 
 /* About Us */
+
 .person-pic {
 	margin: auto;
 	margin-top: 18px;
 	max-width: 140px;
+}
+
+.about {
+	margin-bottom: 50px;
+}
+
+/* Services */
+
+.services {
+	background-color: rgb(245, 251, 225);
+	border-radius: 5px;
+	padding: 8px;
+	margin: 8px;
+}
+
+.services h4 {
+	font-weight: bold;
 }

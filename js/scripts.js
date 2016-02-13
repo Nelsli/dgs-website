@@ -2,6 +2,6 @@ $(window).on("click resize scroll", function() {
 	$(".navbar-collapse.in").removeClass("in");
 });
 
-
-
-//$('#element').on('keyup keypress blur change', function(e) {
+//$("#nav-btn").on("click", function() {
+//	$(".hidden-until-click").show();
+//});
