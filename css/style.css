@@ -9,7 +9,7 @@ body {
 /* General */
 
 .main-content {
-	position: absolute;
+	position: relative;
 	/* Header height - padding for first heading */
 	top: 400px;
 	left: 0px;
@@ -29,12 +29,24 @@ h3 {
 #about-us,
 #services,
 #contact {
-	padding-top: 150px;
+	padding-top: 115px;
+}
+
+.format-pic {
+	margin: 0 auto;
+	border-radius: 5px;
+	max-height: 300px;
 }
 
 /******************************
 Navigation
 ******************************/
+
+.trans-wrap {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(212, 232, 150, .80);
+}
 
 .navbar {
 	height: 500px;
@@ -42,7 +54,9 @@ Navigation
 
 nav.navbar {
 	min-height: 100px;
-	background-color: #d4e896;
+	background: url("http://www.unsigneddesign.com/Vintage_Paper_Textures/vintagebooks6.jpg") no-repeat bottom;
+	background-size: cover;
+/*	background-color: #d4e896;*/
 /*		#ddedab;*/
 /*		#e5f1c0;*/
 	border-bottom: 1px solid #d4e896;
@@ -89,7 +103,7 @@ nav.navbar {
 
 .collapse.in, 
 .navbar-collapse.collapsing {
-	background-color: rgba(247, 229, 255, .8);
+	background-color: rgba(247, 229, 255, .9);
 	position: relative;
 	border-bottom-right-radius: 20px;
 	z-index: 999;
@@ -145,15 +159,30 @@ nav.navbar {
 
 /* About Us */
 
+.pad-5 {
+	padding: 0 10px;
+}
+
+.about-wrap {
+	background-color: rgb(245, 251, 225);
+	border: solid #fff 4px;
+	border-radius:  9px;
+}
+
+.size-text {
+	padding: 0 50px;
+}
+
 .person-pic {
-	margin: auto;
-	margin-top: 18px;
+	margin: 18px auto 0;
 	max-width: 140px;
 }
 
-.about {
+/*
+.about-profile {
 	margin-bottom: 50px;
 }
+*/
 
 /* Services */
 
@@ -163,6 +192,18 @@ nav.navbar {
 	padding: 8px;
 	margin: 8px;
 }
+
+/*
+.services ul {
+	display: none;
+}
+*/
+
+/*
+.services:hover ul {
+	display: inline-block;
+}
+*/
 
 .services h4 {
 	font-weight: bold;
