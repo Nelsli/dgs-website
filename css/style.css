@@ -89,7 +89,7 @@ Navigation
 
 nav.navbar {
 	min-height: 100px;
-	background: url("/img/vintage-paper-min.jpg") no-repeat bottom;
+	background: url("../img/vintage-paper.jpg") no-repeat bottom;
 	background-size: cover;
 	border-bottom: 1px solid transparent;
 /*	box-shadow: 0 0px 4px #7B9B18;*/
