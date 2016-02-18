@@ -49,6 +49,7 @@ h3,
 h4,
 .nav {
 	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 600;
 }
 
 h2 {
@@ -73,7 +74,7 @@ Navigation
 .trans-wrap {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(167,182,117, .6)
+	background-color: rgba(167, 182, 117, .6)
 /*	background-color: rgba(186, 218, 85, .65);*/
 }
 
@@ -81,9 +82,14 @@ Navigation
 	height: 500px;
 }
 
+.navbar-right li {
+	font-family: "Vollkorn";
+	font-size: 16px;
+}
+
 nav.navbar {
 	min-height: 100px;
-	background: url("http://www.unsigneddesign.com/Vintage_Paper_Textures/vintagebooks6.jpg") no-repeat bottom;
+	background: url("/img/vintage-paper-min.jpg") no-repeat bottom;
 	background-size: cover;
 	border-bottom: 1px solid transparent;
 /*	box-shadow: 0 0px 4px #7B9B18;*/
@@ -114,6 +120,9 @@ nav.navbar {
 	min-height: 100px;
 	position: absolute;
 	top: 50%;
+	-ms-transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
 }
 
@@ -133,7 +142,7 @@ nav.navbar {
 
 .collapse.in,
 .navbar-collapse.collapsing {
-	background-color: rgba(247, 229, 255, .9);
+	background-color: rgba(243, 236, 243, .9);
 	position: relative;
 	border-bottom-right-radius: 20px;
 	z-index: 999;
@@ -175,7 +184,7 @@ nav.navbar {
 }
 
 #nav-btn:active {
-	background-color: rgba(205, 95, 255, .3);
+	background-color: rgba(205, 95, 255, .25);
 }
 
 .hide-until-click {
@@ -222,6 +231,11 @@ body {
 
 .services h4 {
 	font-weight: 600;
+}
+
+#pricing {
+	margin-top: 25px;
+	text-align: center;
 }
 
 
