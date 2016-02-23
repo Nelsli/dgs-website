@@ -74,8 +74,8 @@ Navigation
 .trans-wrap {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(167, 182, 117, .6)
-/*	background-color: rgba(186, 218, 85, .65);*/
+/*	background-color: rgba(167, 182, 117, .65);*/
+	background-color: rgba(186, 218, 85, .55);
 }
 
 .navbar {
@@ -89,7 +89,8 @@ Navigation
 
 nav.navbar {
 	min-height: 100px;
-	background: url("../img/vintage-paper.jpg") no-repeat bottom;
+/*	background: url("../img/vintage-paper.jpg") no-repeat bottom;*/
+	background: url("../img/spring-leaves.jpg") no-repeat bottom;
 	background-size: cover;
 	border-bottom: 1px solid transparent;
 /*	box-shadow: 0 0px 4px #7B9B18;*/
