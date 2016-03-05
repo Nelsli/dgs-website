@@ -6,7 +6,6 @@ $(window).on('beforeunload', function () {
 	$(window).scrollTop(0);
 });
 
-
 // Resizes header and text upon scroll
 $(window).scroll(function() {
 	//Sizes header

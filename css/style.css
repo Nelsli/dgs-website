@@ -15,9 +15,10 @@ body {
 .main-content {
 	width: 96%;
 	height: 100%;
-	margin: 400px 2% 0;
-	padding-bottom: 200px;
+	/* Margin to clear header */
+	margin: 300px 2% 0;
 	/* Bottom to create room for footer */
+	padding-bottom: 200px;
 }
 
 .new-section {
@@ -49,20 +50,16 @@ h4 {
 }
 
 h2 {
-	font-size: 2.5em;
+	font-size: 2.1em;
 	margin-top: 0;
 }
 
 h3 {
-	font-size: 1.5em;
+	font-size: 1.3em;
 }
 
 h4 {
 	font-size: 1.1em;
-}
-
-object {
-	max-height: 100%;
 }
 
 .chevron {
@@ -77,6 +74,10 @@ object {
 	width: 100%;
 }
 
+.chevron img {
+	max-height: 100%;
+}
+
 /******************************
 Navigation
 ******************************/
@@ -88,9 +89,10 @@ Navigation
 .trans-wrap {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(221,236,173,.65);
+	background-color: rgba(221, 236, 173, .65);
 }
 
+/* This sets nav height and is also referenced by checkHeight()*/
 .navbar {
 	height: 500px;
 }
@@ -103,7 +105,6 @@ Navigation
 nav.navbar {
 	min-height: 100px;
 	background: url("../img/spring-leaves2.jpg") no-repeat bottom;
-	background-size: cover;
 	border-bottom: 1px solid transparent;
 	/* Animation  settings */
 	-webkit-transition: all 0.05s ease;
@@ -116,10 +117,11 @@ nav.navbar {
 #nav-header-container {
 	position: absolute;
 	top: 0;
-	left: 25px;
+	left: 0;
 	height: 100%;
 	width: 100%;
-	max-width: 960px;
+	max-width: 100%;
+	min-width: 300px;
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -181,8 +183,16 @@ nav.navbar {
 	padding: 50px 0;
 }
 
+a:hover {
+	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+
 .collapse.in li:hover {
 	background-color: rgba(205, 95, 255, .1);
+}
+
+#nav-btn {
+	margin: 5px 0;
 }
 
 #nav-btn:hover {
@@ -213,16 +223,18 @@ nav.navbar {
 Content
 ******************************/
 
+.pad-text {
+	padding: 0;
+	margin: 0;
+}
+
 /* About Us */
 
 .about-wrap {
 	background-color: rgb(243,236,243);
 	border: solid #fff 4px;
 	border-radius: 9px;
-}
-
-.size-text {
-	padding: 25px 50px;
+	margin-bottom: 10px;
 }
 
 .person-pic {
