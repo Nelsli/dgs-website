@@ -224,17 +224,23 @@ Content
 ******************************/
 
 .pad-text {
-	padding: 0;
-	margin: 0;
+	padding-top: 25px;
+	margin: 0 auto;
+	max-width: 450px;
+}
+
+.panel {
+	background-color: rgb(243, 236, 243);
+	border-radius: 5px;
 }
 
 /* About Us */
 
 .about-wrap {
-	background-color: rgb(243,236,243);
-	border: solid #fff 4px;
-	border-radius: 9px;
+	display: inline-block;
 	margin-bottom: 10px;
+	text-align: left;
+	max-width: 500px;
 }
 
 .person-pic {
@@ -242,6 +248,10 @@ Content
 	max-width: 140px;
 }
 
+.white-border {
+	border: solid #fff 4px;
+	border-radius: 9px;
+}
 
 /* Services */
 
@@ -251,8 +261,6 @@ body {
 }
 
 .services {
-	background-color: rgb(243, 236, 243);
-	border-radius: 5px;
 	padding: 8px;
 	margin: 8px;
 }
@@ -284,7 +292,7 @@ body {
 }
 
 footer {
-	position: absolute;
+	position: absolute;	
 	left: 0;
 	bottom: 0;
 	width: 100%;
