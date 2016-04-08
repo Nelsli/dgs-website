@@ -1,35 +1,36 @@
-@media screen and (min-width : 480px) {
-	
+@media screen and (min-width: 480px) {
 	#nav-header-container {
 		max-width: 768px;
 	}
-	
 	nav.navbar {
 		min-height: 100px;
 		background-size: cover;
 		border-bottom: 1px solid transparent;
 	}
-	
+	.navbar {
+		/*		height: 500px;*/
+		max-height: 500px;
+	}
+	.main-content {
+		margin-top: 200px;
+	}
 	h2 {
 		font-size: 2.5em;
 		margin-top: 0;
 	}
-
 	h3 {
 		font-size: 1.5em;
 	}
-	
 	.main-content {
 		margin-top: 400px;
 	}
-	
-	.about-wrap {
-		
-	}
 }
 
+@media only screen and (min-width: 768) {
+	background: url("../img/spring-leaves2.jpg") no-repeat bottom center;
+}
 
-@media only screen and (min-width : 1000px) {
+@media only screen and (min-width: 1000px) {
 	#nav-header-container {
 		left: 25px;
 		max-width: 960px;

@@ -1,13 +1,12 @@
-var getHeight = $(".navbar").css("height");
-getHeight = getHeight.replace("px", "");
+var getHeight;
 
-//Set to scroll to top on refresh
-$(window).on('beforeunload', function () {
-	$(window).scrollTop(0);
-});
+function getHeaderHeight() {
+	getHeight = $(".navbar").css("max-height");
+	getHeight = getHeight.replace("px", "");
+	console.log(getHeight);
+}
 
-// Resizes header and text upon scroll
-$(window).scroll(function() {
+function sizeHeader() {
 	//Sizes header
 	var scrollTop = $(document).scrollTop();
 	var calcHeight = getHeight - scrollTop;
@@ -24,6 +23,23 @@ $(window).scroll(function() {
 	//Chevron opacity
 	var chevronOpacity = 1.5 - (getHeight - calcHeight)/100;
 	$(".chevron-top").css("opacity", chevronOpacity);
+}
+
+getHeaderHeight();
+
+//Set to scroll to top on refresh
+$(window).on('beforeunload', function () {
+	$(window).scrollTop(0);
+});
+
+$(window).on("load resize", function() {
+	getHeaderHeight();
+	sizeHeader();
+});
+
+// Resizes header and text upon scroll
+$(window).scroll(function() {
+	sizeHeader();	
 });
 	
 
