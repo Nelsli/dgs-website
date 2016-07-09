@@ -8,7 +8,6 @@
 		border-bottom: 1px solid transparent;
 	}
 	.navbar {
-		/*		height: 500px;*/
 		max-height: 500px;
 	}
 	.main-content {
@@ -27,7 +26,12 @@
 }
 
 @media only screen and (min-width: 768) {
-	background: url("../img/spring-leaves2.jpg") no-repeat bottom center;
+	nav.navbar {
+		background: url("../img/spring-leaves2.jpg") no-repeat bottom center;
+		/* Animation  settings */
+		-webkit-transition: all 0.05s ease;
+		transition: all 0.05s ease;
+	}
 }
 
 @media only screen and (min-width: 1000px) {

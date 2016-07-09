@@ -1,31 +1,33 @@
-function adjustAboutUsHeight() {
-	$("#phyllis", "#lindsay").css("height", "auto");
-	
-	var $phyllis = $("#phyllis");
-	var $lindsay = $("#lindsay");
-	
-	var phyllisHeight = $phyllis.css("height");
-	console.log("P" + phyllisHeight);
-	var lindsayHeight = $lindsay.css("height");
-	console.log("L" + lindsayHeight);
-	
-	if (phyllisHeight < lindsayHeight) {
-		$phyllis.css("height", lindsayHeight);
-	} else if (phyllisHeight > lindsayHeight) {
-		$lindsay.css("height", phyllisHeight);
-	}
-}
+////Email address
+//var checkText = $(".email").html();
+//var emailArray = ["co", "nt", "act", "@", "dgs", "gr", "ants", ".", "com"];
+//var fullEmail = "";
+//var emailText = "";
+//
+//for (var i = 0; i < emailArray.length; i++) {
+//	fullEmail += emailArray[i];
+//}
+//
+//var emailHtml = "<a href='mailto:'" + fullEmail + ">" + fullEmail + "</a>";
+//
+//$("span.email").html(emailHtml);
+//$("button.email").attr("href", "mailto:" + fullEmail);
 
-$(window).on("load resize", function() {
+//Resize about us profiles to match > 768px
+$(window).on("load resize", function () {
+	$(".about-wrap").height("auto");
 	var docWidth = $(document).width();
-	
+
 	if (docWidth >= 768) {
-		adjustAboutUsHeight();
+		var phyllisHeight = $("#phyllis").height();
+		var lindsayHeight = $("#lindsay").height();
+		var highestDiv = Math.max(phyllisHeight, lindsayHeight);
+		$(".about-wrap").height(highestDiv);
 	} else {
-		$("#phyllis", "#lindsay").attr("height", "");
+		$(".about-wrap").height("auto");
 	}
 });
 
-$(window).on("click resize scroll", function() {
+$(window).on("click resize scroll", function () {
 	$(".navbar-collapse.in").removeClass("in");
 });

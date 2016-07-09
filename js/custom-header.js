@@ -1,31 +1,34 @@
-var getHeight;
+var maxHeight = $(".navbar").css("max-height");
+maxHeight = maxHeight.replace("px", "");
 
-function getHeaderHeight() {
-	getHeight = $(".navbar").css("max-height");
-	getHeight = getHeight.replace("px", "");
-	console.log(getHeight);
-}
+var minHeight = $("nav.navbar").css("min-height");
+minHeight = minHeight.replace("px", "");
+
+//function getHeaderHeight() {
+////	maxHeight = $(".navbar").css("max-height");
+//	maxHeight = maxHeight.replace("px", "");
+//}
 
 function sizeHeader() {
 	//Sizes header
 	var scrollTop = $(document).scrollTop();
-	var calcHeight = getHeight - scrollTop;
+	var calcHeight = maxHeight - scrollTop;
+			
 	$(".shrink").css("height", calcHeight);
 	
 	//Chevron visible/invisible	
 	if (calcHeight < 280) {
-		//380
 		$(".chevron-top").hide();
 	} else {
 		$(".chevron-top").show();
 	}
 	
 	//Chevron opacity
-	var chevronOpacity = 1.5 - (getHeight - calcHeight)/100;
+	var chevronOpacity = 1.5 - (maxHeight - calcHeight)/100;
 	$(".chevron-top").css("opacity", chevronOpacity);
 }
 
-getHeaderHeight();
+//getHeaderHeight();
 
 //Set to scroll to top on refresh
 $(window).on('beforeunload', function () {
@@ -33,15 +36,14 @@ $(window).on('beforeunload', function () {
 });
 
 $(window).on("load resize", function() {
-	getHeaderHeight();
-	sizeHeader();
+//		getHeaderHeight();
+		sizeHeader();
 });
 
 // Resizes header and text upon scroll
 $(window).scroll(function() {
 	sizeHeader();	
 });
-	
 
 //Smooth scrolling
 $(function () {
