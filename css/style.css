@@ -2,51 +2,38 @@
 	box-sizing: border-box;
 }
 
+
 /******************************
 General
 ******************************/
 
 body {
-	font-family: "Vollkorn",  serif;
+	font-family: "Vollkorn", serif;
 	font-size: 18px;
 	color: #444;
-}
-
-.main-content {
-	width: 96%;
+  -ms-overflow-style: scrollbar;
 	height: 100%;
-	/* Margin to clear header */
-	margin: 300px 2% 0;
-	/* Bottom to create room for footer */
-	padding-bottom: 200px;
+	margin-bottom: 100px;
 }
 
-.new-section {
-	margin-top: 50px;
+h1,
+h2,
+h3,
+h4,
+#nav-menu a,
+.btn-default {
+	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+	font-weight: 600;
+}
+
+h1 {
+	font-size: 16px;
+	margin: 0;
 }
 
 h2,
 h3 {
 	text-align: center;
-}
-
-#about-us {
-	margin: 30px;
-  padding-top: 115px;
-}
-
-.format-pic {
-	margin: 30px auto 0;
-	border-radius: 5px;
-	max-height: 300px;
-}
-
-h1,
-h2, 
-h3,
-h4 {
-	font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
-	font-weight: 600;
 }
 
 h2 {
@@ -62,10 +49,29 @@ h4 {
 	font-size: 1.1em;
 }
 
+.main-content {
+	width: 96%;
+	height: 100%;
+	/* Margin to clear header */
+	margin: 300px 2% 0;
+	/* Bottom to create room for footer */
+	padding-bottom: 200px;
+}
+
+.format-pic {
+	margin: 30px auto 0;
+	border-radius: 5px;
+	max-height: 300px;
+}
+
 .chevron {
 	height: 30px;
-	margin: 50px 0;
+	margin: 60px 0;
 	text-align: center;
+}
+
+.chevron img {
+	max-height: 100%;
 }
 
 .chevron-top {
@@ -74,8 +80,19 @@ h4 {
 	width: 100%;
 }
 
-.chevron img {
-	max-height: 100%;
+.panel {
+	background-color: rgb(243, 236, 243);
+	border-radius: 5px;
+}
+
+.btn-default {
+	width: 100%;
+  background-color: rgb(129, 114, 129);
+  color: white;
+}
+
+.email {
+	font-weight: 700;
 }
 
 /******************************
@@ -89,12 +106,12 @@ Navigation
 .trans-wrap {
 	height: 100%;
 	width: 100%;
-	background-color: rgba(221, 236, 173, .65);
+	background-color: rgba(221, 236, 173, .60);
 }
 
-/* This sets nav height and is also referenced by checkHeight()*/
 .navbar {
-	height: 500px;
+	/* This sets nav height. and is also referenced by checkHeight()*/
+	max-height: 400px;
 }
 
 .navbar-right li {
@@ -104,11 +121,12 @@ Navigation
 
 nav.navbar {
 	min-height: 100px;
-	background: url("../img/spring-leaves2.jpg") no-repeat bottom;
+	background: url("../img/spring-leaves.jpg") no-repeat bottom center;
+	background-size: cover;
 	border-bottom: 1px solid transparent;
 	/* Animation  settings */
-	-webkit-transition: all 0.05s ease;
-	transition: all 0.05s ease;
+/*	-webkit-transition: all 0.05s ease;*/
+/*	transition: all 0.05s ease;*/
 }
 
 
@@ -128,19 +146,19 @@ nav.navbar {
 }
 
 #nav-header {
-	max-width: 100%;
-	max-height: 100%;
-	min-height: 100px;
 	position: absolute;
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
+	max-width: 100%;
+	max-height: 100%;
+/*	min-height: 100px;*/
 }
 
 #nav-menu a {
-	font-size: 1.2em;
+	font-size: 1em;
 	color: #444;
 }
 
@@ -162,10 +180,15 @@ nav.navbar {
 	overflow: hidden;
 }
 
+.collapse.in ul,
+.navbar-collapse.collapsing ul {
+	padding: 10px 0;
+}
+
 .collapse.in li,
 .navbar-collapse.collapsing li {
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 1.2em;
 	padding: 10px;
 }
 
@@ -178,13 +201,9 @@ nav.navbar {
 	overflow: hidden;
 }
 
-.collapse.in ul,
-.navbar-collapse.collapsing ul {
-	padding: 50px 0;
-}
-
-a:hover {
-	text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+.nav li a:hover {
+	color: #777;
+/*	text-shadow: 0px 0px 2px white;*/
 }
 
 .collapse.in li:hover {
@@ -212,13 +231,6 @@ a:hover {
 	display: none !important;
 }
 
-/*Is this necessary?*/
-.collapse.in .hide-until-click {
-	display: block !important;
-	color: red;
-}
-
-
 /******************************
 Content
 ******************************/
@@ -229,18 +241,23 @@ Content
 	max-width: 450px;
 }
 
-.panel {
-	background-color: rgb(243, 236, 243);
-	border-radius: 5px;
-}
 
 /* About Us */
 
+#about-us {
+/*	margin: 30px;*/
+	padding-top: 135px;
+}
+
 .about-wrap {
 	display: inline-block;
-	margin-bottom: 10px;
 	text-align: left;
 	max-width: 500px;
+	padding: 15px;
+}
+
+#profiles {
+	margin-top: 60px;
 }
 
 .person-pic {
@@ -253,12 +270,15 @@ Content
 	border-radius: 9px;
 }
 
+
 /* Services */
 
+/*
 body {
 	height: 100%;
 	margin-bottom: 100px;
 }
+*/
 
 .services {
 	padding: 8px;
@@ -281,27 +301,26 @@ Footer
 
 html,
 body {
-	margin: 0 0 -500px;
 	padding: 0;
 	height: 100%;
 }
 
 #page-wrap {
-	min-height: 100%;
 	position: relative;
+	min-height: 100%;
+	margin-bottom: -55px;
 }
 
 footer {
-	position: absolute;	
+	position: absolute;
 	left: 0;
 	bottom: 0;
 	width: 100%;
-	height: 100px;
+	height: 55px;
 	/* Height of the footer */
-	background-color: rgba(129,114,129,0.35);
+	background-color: rgba(129, 114, 129, 0.35);
 }
 
 .footer {
 	padding-top: 20px;
 }
-
