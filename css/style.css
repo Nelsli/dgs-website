@@ -2,7 +2,6 @@
 	box-sizing: border-box;
 }
 
-
 /******************************
 General
 ******************************/
@@ -55,29 +54,13 @@ h4 {
 	/* Margin to clear header */
 	margin: 300px 2% 0;
 	/* Bottom to create room for footer */
-	padding-bottom: 200px;
+	padding-bottom: 140px;
 }
 
 .format-pic {
 	margin: 30px auto 0;
 	border-radius: 5px;
 	max-height: 300px;
-}
-
-.chevron {
-	height: 30px;
-	margin: 60px 0;
-	text-align: center;
-}
-
-.chevron img {
-	max-height: 100%;
-}
-
-.chevron-top {
-	position: absolute;
-	bottom: -20px;
-	width: 100%;
 }
 
 .panel {
@@ -93,6 +76,24 @@ h4 {
 
 .email {
 	font-weight: 700;
+}
+
+/* Chrevron ******************/
+
+.chevron {
+	height: 30px;
+	margin: 60px 0;
+	text-align: center;
+}
+
+.chevron img {
+	max-height: 100%;
+}
+
+.chevron-top {
+	position: absolute;
+	bottom: -20px;
+	width: 100%;
 }
 
 /******************************
@@ -129,9 +130,6 @@ nav.navbar {
 /*	transition: all 0.05s ease;*/
 }
 
-
-/* Logo *********************************/
-
 #nav-header-container {
 	position: absolute;
 	top: 0;
@@ -153,8 +151,7 @@ nav.navbar {
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
 	max-width: 100%;
-	max-height: 100%;
-/*	min-height: 100px;*/
+	max-height: 75%;
 }
 
 #nav-menu a {
@@ -270,15 +267,7 @@ Content
 	border-radius: 9px;
 }
 
-
 /* Services */
-
-/*
-body {
-	height: 100%;
-	margin-bottom: 100px;
-}
-*/
 
 .services {
 	padding: 8px;
@@ -294,6 +283,27 @@ body {
 	text-align: center;
 }
 
+/* Services */
+
+.testimonial {
+	margin: 0 8px 8px;
+	padding: 8px;
+}
+
+/* Contact Us */
+
+.social-media {
+	margin-top: 20px;
+}
+
+.caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin: 0;
+    padding: 5px 15%;
+}
 
 /******************************
 Footer
