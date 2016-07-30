@@ -35,15 +35,18 @@
 		-webkit-transition: all 0.05s ease;
 		transition: all 0.05s ease;
 	}
-  #testimonial-content {
-    display: block;
+	.main-content {
+		padding-bottom: 145px;
+	}
+	#testimonial-content {
+		display: block;
 	}
 	.testimonial {
 		display: block;
 	}
-	  #slider {
-    display: none;
-  }
+	#slider {
+		display: none;
+	}
 }
 
 @media screen and (min-width: 1000px) {
@@ -54,5 +57,4 @@
 	#testimonial-content .col-sm-4 {
 		padding: 0 8px;
 	}
-
 }

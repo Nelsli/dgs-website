@@ -55,7 +55,7 @@ h4 {
 	/* Margin to clear header */
 	margin: 300px 2% 0;
 	/* Bottom to create room for footer */
-	padding-bottom: 145px;
+	padding-bottom: 90px;
 }
 
 .format-pic {
@@ -238,9 +238,14 @@ Content
 ******************************/
 
 .pad-text {
-	padding-top: 25px;
 	margin: 0 auto;
 	max-width: 450px;
+}
+
+.pad-text,
+#services-content,
+#testimonial-content {
+	padding-top: 25px;
 }
 
 
@@ -358,7 +363,6 @@ Content
 	left: 0;
 	padding: 0;
 }
-
 
 .slider-btn .glyphicon {
 	color: #444;

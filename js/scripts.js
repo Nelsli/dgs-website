@@ -13,6 +13,7 @@ $(window).on("load resize", function () {
 	}
 });
 
+//Removes nav dropdown
 $(window).on("click resize scroll", function () {
 	$(".navbar-collapse.in").removeClass("in");
 });
@@ -23,7 +24,6 @@ var testimonials = $(".testimonial").clone();
 $("#slider-panel").append(testimonials);
 
 var $testimonials = $("#slider .testimonial");
-$testimonials.addClass("vert-center");
 var counter = 0;
 
 $(".slider-btn").click(function() {
