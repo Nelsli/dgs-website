@@ -7,7 +7,7 @@ $(window).on("load resize", function () {
 		var phyllisHeight = $("#phyllis").height();
 		var lindsayHeight = $("#lindsay").height();
 		var highestDiv = Math.max(phyllisHeight, lindsayHeight);
-		$(".about-wrap").height(highestDiv);
+		$(".about-wrap").height(highestDiv);		
 	} else {
 		$(".about-wrap").height("auto");
 	}

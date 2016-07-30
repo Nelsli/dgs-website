@@ -55,7 +55,7 @@ h4 {
 	/* Margin to clear header */
 	margin: 300px 2% 0;
 	/* Bottom to create room for footer */
-	padding-bottom: 140px;
+	padding-bottom: 145px;
 }
 
 .format-pic {
@@ -175,9 +175,10 @@ nav.navbar {
 .navbar-collapse.collapsing {
 	background-color: rgba(243, 236, 243, .9);
 	position: relative;
-	border-bottom-right-radius: 20px;
+	border-radius: 0 0 20px 20px;
 	z-index: 999;
 	overflow: hidden;
+	margin: 0;
 }
 
 .collapse.in ul,
@@ -211,7 +212,7 @@ nav.navbar {
 }
 
 #nav-btn {
-	margin: 5px 0;
+	margin: 5px 0 0 10px;
 }
 
 #nav-btn:hover {
@@ -320,7 +321,6 @@ Content
 
 #slider .testimonial.active {
 	display: block;
-	min-height: 275px;
 }
 
 #slider button {
@@ -346,7 +346,7 @@ Content
 }
 
 #slider button:active .glyphicon {
-	color: #bada55;
+	color: #ccc;
 }
 
 .next {
@@ -363,6 +363,7 @@ Content
 .slider-btn .glyphicon {
 	color: #444;
 	font-size: 30px;
+	top: 0;
 }
 
 
@@ -404,7 +405,6 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 55px;
-	/* Height of the footer */
 	background-color: rgba(129, 114, 129, 0.35);
 }
 
