@@ -28,18 +28,31 @@
 	}
 }
 
-@media only screen and (min-width: 768) {
+@media screen and (min-width: 768px) {
 	nav.navbar {
 		background: url("../img/spring-leaves2.jpg") no-repeat bottom center;
 		/* Animation  settings */
 		-webkit-transition: all 0.05s ease;
 		transition: all 0.05s ease;
 	}
+  #testimonial-content {
+    display: block;
+	}
+	.testimonial {
+		display: block;
+	}
+	  #slider {
+    display: none;
+  }
 }
 
-@media only screen and (min-width: 1000px) {
+@media screen and (min-width: 1000px) {
 	#nav-header-container {
 		left: 25px;
 		max-width: 960px;
 	}
+	#testimonial-content .col-sm-4 {
+		padding: 0 8px;
+	}
+
 }

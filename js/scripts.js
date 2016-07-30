@@ -1,18 +1,3 @@
-////Email address
-//var checkText = $(".email").html();
-//var emailArray = ["co", "nt", "act", "@", "dgs", "gr", "ants", ".", "com"];
-//var fullEmail = "";
-//var emailText = "";
-//
-//for (var i = 0; i < emailArray.length; i++) {
-//	fullEmail += emailArray[i];
-//}
-//
-//var emailHtml = "<a href='mailto:'" + fullEmail + ">" + fullEmail + "</a>";
-//
-//$("span.email").html(emailHtml);
-//$("button.email").attr("href", "mailto:" + fullEmail);
-
 //Resize about us profiles to match > 768px
 $(window).on("load resize", function () {
 	$(".about-wrap").height("auto");
@@ -31,3 +16,42 @@ $(window).on("load resize", function () {
 $(window).on("click resize scroll", function () {
 	$(".navbar-collapse.in").removeClass("in");
 });
+
+//Testimonial slider
+var testimonials = $(".testimonial").clone();
+
+$("#slider-panel").append(testimonials);
+
+var $testimonials = $("#slider .testimonial");
+$testimonials.addClass("vert-center");
+var counter = 0;
+
+$(".slider-btn").click(function() {
+  $("#slider .testimonial").removeClass("active");
+  var lastValue = $testimonials.length - 1;
+  
+  if ($(this).hasClass("next")) {
+    
+    if (counter < lastValue) {
+      counter += 1;
+    } else {
+      counter = 0;
+    }
+    
+  } else {
+    
+    if (counter > 0) {
+      counter -=1;
+    } else {
+      counter = lastValue;
+    }    
+    
+  }
+  
+  var showElement = $testimonials[counter];
+  $(showElement).addClass("active");
+});
+
+
+
+

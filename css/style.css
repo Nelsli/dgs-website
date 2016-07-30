@@ -2,6 +2,7 @@
 	box-sizing: border-box;
 }
 
+
 /******************************
 General
 ******************************/
@@ -10,7 +11,7 @@ body {
 	font-family: "Vollkorn", serif;
 	font-size: 18px;
 	color: #444;
-  -ms-overflow-style: scrollbar;
+	-ms-overflow-style: scrollbar;
 	height: 100%;
 	margin-bottom: 100px;
 }
@@ -70,19 +71,20 @@ h4 {
 
 .btn-default {
 	width: 100%;
-  background-color: rgb(129, 114, 129);
-  color: white;
+	background-color: rgb(129, 114, 129);
+	color: white;
 }
 
 .email {
 	font-weight: 700;
 }
 
+
 /* Chrevron ******************/
 
 .chevron {
 	height: 30px;
-	margin: 60px 0;
+	margin: 40px 0;
 	text-align: center;
 }
 
@@ -95,6 +97,7 @@ h4 {
 	bottom: -20px;
 	width: 100%;
 }
+
 
 /******************************
 Navigation
@@ -126,8 +129,8 @@ nav.navbar {
 	background-size: cover;
 	border-bottom: 1px solid transparent;
 	/* Animation  settings */
-/*	-webkit-transition: all 0.05s ease;*/
-/*	transition: all 0.05s ease;*/
+	/*	-webkit-transition: all 0.05s ease;*/
+	/*	transition: all 0.05s ease;*/
 }
 
 #nav-header-container {
@@ -160,7 +163,7 @@ nav.navbar {
 }
 
 
-/* Collapsing Nav **************************/
+/* Collapsing Nav */
 
 .navbar ul li,
 .navbar button,
@@ -200,7 +203,7 @@ nav.navbar {
 
 .nav li a:hover {
 	color: #777;
-/*	text-shadow: 0px 0px 2px white;*/
+	/*	text-shadow: 0px 0px 2px white;*/
 }
 
 .collapse.in li:hover {
@@ -228,6 +231,7 @@ nav.navbar {
 	display: none !important;
 }
 
+
 /******************************
 Content
 ******************************/
@@ -242,7 +246,7 @@ Content
 /* About Us */
 
 #about-us {
-/*	margin: 30px;*/
+	/*	margin: 30px;*/
 	padding-top: 135px;
 }
 
@@ -267,6 +271,7 @@ Content
 	border-radius: 9px;
 }
 
+
 /* Services */
 
 .services {
@@ -283,12 +288,83 @@ Content
 	text-align: center;
 }
 
+
 /* Services */
 
 .testimonial {
-	margin: 0 8px 8px;
+	display: none;
+	margin: 0 4px 8px;
 	padding: 8px;
 }
+
+
+/* Testimonials */
+
+#testimonial-content {
+	display: none;
+}
+
+#testimonial-content .col-sm-4 {
+	padding: 0 4px;
+}
+
+#slider {
+	position: relative;
+}
+
+#slider .testimonial {
+	display: none;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#slider .testimonial.active {
+	display: block;
+	min-height: 275px;
+}
+
+#slider button {
+	position: absolute;
+	width: 10%;
+	height: 100%;
+	top: 0;
+	border: none;
+	background-color: transparent;
+}
+
+#slider button:hover,
+#slider button:active,
+#slider button:focus {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	box-shadow: none;
+}
+
+#slider button:hover .glyphicon {
+	transform: scale(1.2, 1.2);
+}
+
+#slider button:active .glyphicon {
+	color: #bada55;
+}
+
+.next {
+	right: 0;
+	padding: 0;
+}
+
+.previous {
+	left: 0;
+	padding: 0;
+}
+
+
+.slider-btn .glyphicon {
+	color: #444;
+	font-size: 30px;
+}
+
 
 /* Contact Us */
 
@@ -297,13 +373,14 @@ Content
 }
 
 .caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: 0;
-    padding: 5px 15%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(255, 255, 255, 0.7);
+	margin: 0;
+	padding: 5px 18%;
 }
+
 
 /******************************
 Footer
