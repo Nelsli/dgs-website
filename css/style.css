@@ -12,7 +12,6 @@ body {
 	font-size: 18px;
 	color: #444;
 	-ms-overflow-style: scrollbar;
-	height: 100%;
 	margin-bottom: 100px;
 }
 
@@ -114,7 +113,6 @@ Navigation
 
 .navbar-right li {
 	font-size: 16px;
-	color: #444;
 }
 
 nav.navbar {
@@ -166,7 +164,6 @@ nav.navbar {
 .navbar-collapse.collapsing {
 	position: relative;
 	background-color: rgba(168, 148, 163, 0.9);
-/*		rgba(243, 236, 243, .9);*/
 	border: none;
 	border-radius: 0 0 20px 20px;
 	z-index: 999;
@@ -174,9 +171,8 @@ nav.navbar {
 	margin: 0;
 }
 
-.collapse.in ul,
-.navbar-collapse.collapsing ul {
-	padding: 10px 0;
+.navbar-fixed-top .navbar-collapse {
+    max-height: 100%;
 }
 
 .collapse.in li,
@@ -300,6 +296,7 @@ Content
 	padding: 8px;
 }
 
+
 /* Testimonials */
 
 #testimonial-content {
@@ -342,7 +339,8 @@ Content
 	box-shadow: none;
 }
 
-#slider button:hover .glyphicon, #slider button:active .glyphicon {
+#slider button:hover .glyphicon,
+#slider button:active .glyphicon {
 	transform: scale(1.2, 1.2);
 }
 
@@ -410,4 +408,66 @@ footer {
 
 .footer {
 	padding-top: 20px;
+}
+	
+/******************************
+Media Queries
+******************************/
+
+@media screen and (min-width: 480px) {
+	h2 {
+		font-size: 2.5em;
+		margin-top: 0;
+	}
+	h3 {
+		font-size: 1.5em;
+	}
+}
+
+@media (max-device-width: 480px) and (orientation: landscape) {
+	.navbar {
+		max-height: 320px;
+	}
+	.main-content {
+		margin-top: 220px;
+	}
+	body { font-size: 16px; }
+}
+
+@media screen and (min-width: 768px) {
+	nav.navbar {
+		min-height: 100px;
+	}
+	.navbar {
+		max-height: 500px;
+	}
+	.main-content {
+		margin-top: 400px;
+		padding-bottom: 145px;
+	}
+	#testimonial-content {
+		display: block;
+	}
+	.testimonial {
+		display: block;
+	}
+	#slider {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	#nav-header-container {
+		left: 25px;
+		max-width: 960px;
+	}
+	#testimonial-content .col-sm-4 {
+		padding: 0 8px;
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	nav.navbar {
+		background-size: cover;
+	}
 }
