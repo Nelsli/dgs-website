@@ -80,7 +80,7 @@ h4 {
 }
 
 
-/* Chrevron ******************/
+/* Chevron ******************/
 
 .chevron {
 	height: 30px;
@@ -107,12 +107,6 @@ Navigation
 	background-color: white;
 }
 
-.trans-wrap {
-	height: 100%;
-	width: 100%;
-	background-color: rgba(221, 236, 173, .60);
-}
-
 .navbar {
 	/* This sets nav height. and is also referenced by checkHeight()*/
 	max-height: 400px;
@@ -124,13 +118,10 @@ Navigation
 }
 
 nav.navbar {
-	min-height: 100px;
-	background: url("../img/spring-leaves.jpg") no-repeat bottom center;
-	background-size: cover;
+	min-height: 80px;
+	background: url("../img/spring-leaves.jpg") no-repeat center;
+	background-size: auto;
 	border-bottom: 1px solid transparent;
-	/* Animation  settings */
-	/*	-webkit-transition: all 0.05s ease;*/
-	/*	transition: all 0.05s ease;*/
 }
 
 #nav-header-container {
@@ -153,7 +144,7 @@ nav.navbar {
 	-webkit-transform: translateY(-50%);
 	-moz-transform: translateY(-50%);
 	transform: translateY(-50%);
-	max-width: 100%;
+	max-width: 768px;
 	max-height: 75%;
 }
 
@@ -202,9 +193,14 @@ nav.navbar {
 	overflow: hidden;
 }
 
+.nav li a {
+	text-shadow: 0px 0px 2px rgb(221, 236, 173);
+}
+
 .nav li a:hover {
 	color: #777;
-	/*	text-shadow: 0px 0px 2px white;*/
+	transform: scale(1.1, 1.1);
+/*		text-shadow: 0px 0px 2px white;*/
 }
 
 .collapse.in li:hover {
@@ -225,7 +221,7 @@ nav.navbar {
 }
 
 #nav-btn:active {
-	background-color: rgba(205, 95, 255, .25);
+	background-color: #A894A3;
 }
 
 .hide-until-click {
@@ -252,8 +248,7 @@ Content
 /* About Us */
 
 #about-us {
-	/*	margin: 30px;*/
-	padding-top: 135px;
+	padding-top: 125px;
 }
 
 .about-wrap {
@@ -290,8 +285,9 @@ Content
 }
 
 #pricing {
-	margin-top: 25px;
+	margin: 25px auto 0;
 	text-align: center;
+	max-width: 95%;
 }
 
 
@@ -301,8 +297,22 @@ Content
 	display: none;
 	margin: 0 4px 8px;
 	padding: 8px;
+/*	background: url("../img/nature-sky-clouds-flowers.jpg");	*/
 }
 
+/*
+.panel-left {
+    background-position: left bottom; 
+}
+
+.panel-center {
+	background-position: center; 
+}
+
+.panel-right {
+	background-position: right center; 
+}
+*/
 
 /* Testimonials */
 
@@ -346,7 +356,7 @@ Content
 	box-shadow: none;
 }
 
-#slider button:hover .glyphicon {
+#slider button:hover .glyphicon, #slider button:active .glyphicon {
 	transform: scale(1.2, 1.2);
 }
 
@@ -409,7 +419,7 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 55px;
-	background-color: rgba(129, 114, 129, 0.35);
+	background-color: #A894A3;
 }
 
 .footer {

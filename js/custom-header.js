@@ -1,15 +1,16 @@
-var maxHeight = $(".navbar").css("max-height");
-maxHeight = maxHeight.replace("px", "");
+var maxHeight;
+var minHeight;
 
-var minHeight = $("nav.navbar").css("min-height");
-minHeight = minHeight.replace("px", "");
-
-//function getHeaderHeight() {
-////	maxHeight = $(".navbar").css("max-height");
-//	maxHeight = maxHeight.replace("px", "");
-//}
+function getHeaderHeight() {
+	maxHeight = $(".navbar").css("max-height");
+	maxHeight = maxHeight.replace("px", "");
+	
+	minHeight = $("nav.navbar").css("min-height");
+	minHeight = minHeight.replace("px", "");
+}
 
 function sizeHeader() {
+	getHeaderHeight();
 	//Sizes header
 	var scrollTop = $(document).scrollTop();
 	var calcHeight = maxHeight - scrollTop;
@@ -27,8 +28,6 @@ function sizeHeader() {
 	var chevronOpacity = 1.5 - (maxHeight - calcHeight)/100;
 	$(".chevron-top").css("opacity", chevronOpacity);
 }
-
-//getHeaderHeight();
 
 //Set to scroll to top on refresh
 $(window).on('beforeunload', function () {

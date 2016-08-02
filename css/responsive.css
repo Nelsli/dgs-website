@@ -1,21 +1,9 @@
 @media screen and (min-width: 480px) {
+/*
 	#nav-header-container {
-		max-width: 768px;
+		max-width: 100%;
 	}
-	#nav-header {
-		max-height: 100%;
-	}
-	nav.navbar {
-		min-height: 100px;
-		background-size: cover;
-		border-bottom: 1px solid transparent;
-	}
-	.navbar {
-		max-height: 500px;
-	}
-	.main-content {
-		margin-top: 200px;
-	}
+*/
 	h2 {
 		font-size: 2.5em;
 		margin-top: 0;
@@ -23,19 +11,17 @@
 	h3 {
 		font-size: 1.5em;
 	}
-	.main-content {
-		margin-top: 400px;
-	}
 }
 
 @media screen and (min-width: 768px) {
 	nav.navbar {
-		background: url("../img/spring-leaves2.jpg") no-repeat bottom center;
-		/* Animation  settings */
-		-webkit-transition: all 0.05s ease;
-		transition: all 0.05s ease;
+		min-height: 100px;
+	}
+	.navbar {
+		max-height: 500px;
 	}
 	.main-content {
+		margin-top: 400px;
 		padding-bottom: 145px;
 	}
 	#testimonial-content {
