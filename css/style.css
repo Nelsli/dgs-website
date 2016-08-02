@@ -164,8 +164,10 @@ nav.navbar {
 
 .collapse.in,
 .navbar-collapse.collapsing {
-	background-color: rgba(243, 236, 243, .9);
+	background-color: rgba(168, 148, 163, 0.9);
+/*		rgba(243, 236, 243, .9);*/
 	position: relative;
+	border: none;
 	border-radius: 0 0 20px 20px;
 	z-index: 999;
 	overflow: hidden;
