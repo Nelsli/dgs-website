@@ -164,9 +164,9 @@ nav.navbar {
 
 .collapse.in,
 .navbar-collapse.collapsing {
+	position: relative;
 	background-color: rgba(168, 148, 163, 0.9);
 /*		rgba(243, 236, 243, .9);*/
-	position: relative;
 	border: none;
 	border-radius: 0 0 20px 20px;
 	z-index: 999;
@@ -202,7 +202,6 @@ nav.navbar {
 .nav li a:hover {
 	color: #777;
 	transform: scale(1.1, 1.1);
-/*		text-shadow: 0px 0px 2px white;*/
 }
 
 .collapse.in li:hover {
@@ -299,22 +298,7 @@ Content
 	display: none;
 	margin: 0 4px 8px;
 	padding: 8px;
-/*	background: url("../img/nature-sky-clouds-flowers.jpg");	*/
 }
-
-/*
-.panel-left {
-    background-position: left bottom; 
-}
-
-.panel-center {
-	background-position: center; 
-}
-
-.panel-right {
-	background-position: right center; 
-}
-*/
 
 /* Testimonials */
 
