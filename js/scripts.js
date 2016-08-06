@@ -1,4 +1,4 @@
-// Shrinking sticky header /////////////////////////
+// Shrinking sticky header //
 
 var maxHeight;
 var minHeight;
@@ -6,7 +6,7 @@ var minHeight;
 function getHeaderHeight() {
 	maxHeight = $(".navbar").css("max-height");
 	maxHeight = maxHeight.replace("px", "");
-	
+
 	minHeight = $("nav.navbar").css("min-height");
 	minHeight = minHeight.replace("px", "");
 }
@@ -16,18 +16,18 @@ function sizeHeader() {
 	//Sizes header
 	var scrollTop = $(document).scrollTop();
 	var calcHeight = maxHeight - scrollTop;
-			
+
 	$(".shrink").css("height", calcHeight);
-	
+
 	//Chevron visible/invisible	
 	if (calcHeight < 280) {
 		$(".chevron-top").hide();
 	} else {
 		$(".chevron-top").show();
 	}
-	
+
 	//Chevron opacity
-	var chevronOpacity = 1.5 - (maxHeight - calcHeight)/100;
+	var chevronOpacity = 1.5 - (maxHeight - calcHeight) / 100;
 	$(".chevron-top").css("opacity", chevronOpacity);
 }
 
@@ -36,14 +36,14 @@ $(window).on('beforeunload', function () {
 	$(window).scrollTop(0);
 });
 
-$(window).on("load resize", function() {
-		sizeHeader();
-		sizeAboutPanels();
+$(window).on("load resize", function () {
+	sizeHeader();
+	sizeAboutPanels();
 });
 
 // Resizes header and text upon scroll
-$(window).scroll(function() {
-	sizeHeader();	
+$(window).scroll(function () {
+	sizeHeader();
 });
 
 //Smooth scrolling
@@ -63,8 +63,7 @@ $(function () {
 });
 
 
-
-//Page scripts //////////////////////////////////
+// Page scripts //
 
 //Resize about us profiles to match > 768px
 function sizeAboutPanels() {
@@ -75,7 +74,7 @@ function sizeAboutPanels() {
 		var phyllisHeight = $("#phyllis").height();
 		var lindsayHeight = $("#lindsay").height();
 		var highestDiv = Math.max(phyllisHeight, lindsayHeight);
-		$(".about-wrap").height(highestDiv);		
+		$(".about-wrap").height(highestDiv);
 	} else {
 		$(".about-wrap").height("auto");
 	}
@@ -86,41 +85,40 @@ $(window).on("click resize scroll", function () {
 	$(".navbar-collapse.in").removeClass("in");
 });
 
-
 //Testimonial slider
-var testimonials = $(".testimonial").clone();
+$(document).ready(function() {
+  var counter = 0;
+  var $slider = $("#testimonial-content");
+  var $sliderContent = $(".slider-content");
 
-$("#slider-panel").append(testimonials);
+  $($sliderContent[0]).addClass("slider-active");
 
-var $testimonials = $("#slider .testimonial");
-var counter = 0;
+  var sliderBtnHtml = '<button type="button" class="slider-btn slider-previous" aria-label="Previous"> <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span></button>';
+	
+  sliderBtnHtml += '<button type="button" class="slider-btn slider-next" aria-label="Next"> <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>';
 
-$(".slider-btn").click(function() {
-  $("#slider .testimonial").removeClass("active");
-  var lastValue = $testimonials.length - 1;
-  
-  if ($(this).hasClass("next")) {
-    
-    if (counter < lastValue) {
-      counter += 1;
-    } else {
-      counter = 0;
-    }
-    
-  } else {
-    
-    if (counter > 0) {
-      counter -=1;
-    } else {
-      counter = lastValue;
-    }    
-    
-  }
-  
-  var showElement = $testimonials[counter];
-  $(showElement).addClass("active");
+  $($slider).append(sliderBtnHtml);
+
+  $(".slider-btn").click(function() {
+      var lastValue = $sliderContent.length - 1;
+      var showElement;
+      $sliderContent.removeClass("slider-active");
+
+      if ($(this).hasClass("slider-next")) {
+        if (counter < lastValue) {
+          counter += 1;
+        } else {
+          counter = 0;
+        }
+      } else {
+        if (counter > 0) {
+          counter -= 1;
+        } else {
+          counter = lastValue;
+        }
+      }
+
+    showElement = $sliderContent[counter]; $(showElement).addClass("slider-active"); 
+    $(".slider-active").show();
+  });
 });
-
-
-
-
