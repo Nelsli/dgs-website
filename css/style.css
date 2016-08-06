@@ -160,6 +160,11 @@ nav.navbar {
 	z-index: 999;
 }
 
+.navbar ul li {
+	  max-width: 80%;
+    margin: 0 auto;
+}
+
 .collapse.in,
 .navbar-collapse.collapsing {
 	position: relative;
@@ -196,7 +201,6 @@ nav.navbar {
 }
 
 .nav li a:hover {
-	color: #777;
 	transform: scale(1.1, 1.1);
 }
 
@@ -354,7 +358,8 @@ Content
 }
 
 .slider-btn:active .glyphicon {
-	color: #ccc;
+	color: #544A51;
+	background-color: transparent;
 }
 
 .slider-btn:focus .glyphicon,
