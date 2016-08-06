@@ -381,6 +381,18 @@ Content
 	padding: 5px 18%;
 }
 
+a.email {
+	color: #544A51
+}
+
+span.email:after {
+	content: "@tcatnoc";
+}
+
+span.email:before {
+	content: "moc.";
+}
+
 
 /******************************
 Footer

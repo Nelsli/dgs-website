@@ -122,3 +122,19 @@ $(document).ready(function() {
     $(".slider-active").show();
   });
 });
+
+//Contact
+var emailSpan = document.getElementsByClassName("email")[1];
+var prefix = window.getComputedStyle(emailSpan, ":before").content;
+var suffix = window.getComputedStyle(emailSpan, ":after").content;
+var address = prefix + $("span.email").text() + suffix;
+var contact = "";
+
+for (i = address.length - 1; i >= 0; i--) {
+	if (address[i] !== '"') {
+		email += address[i];
+	}
+}
+
+$("a.email").attr("href", "mailto:" + contact);
+
