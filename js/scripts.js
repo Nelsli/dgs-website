@@ -132,7 +132,7 @@ var contact = "";
 
 for (i = address.length - 1; i >= 0; i--) {
 	if (address[i] !== '"') {
-		email += address[i];
+		contact += address[i];
 	}
 }
 
