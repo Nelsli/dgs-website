@@ -103,7 +103,7 @@ Navigation
 ******************************/
 
 .logo {
-	background-color: white;
+	background-color: white;.
 }
 
 .navbar {
@@ -167,7 +167,7 @@ nav.navbar {
 	border: none;
 	border-radius: 0 0 20px 20px;
 	z-index: 999;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	margin: 0;
 }
 
@@ -415,6 +415,7 @@ footer {
 .footer {
 	padding-top: 20px;
 }
+<<<<<<< HEAD
 
 
 /******************************
