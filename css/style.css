@@ -435,10 +435,10 @@ Media Queries
 
 @media (max-device-width: 480px) and (orientation: landscape) {
 	.navbar {
-		max-height: 320px;
+		max-height: 300px;
 	}
 	.main-content {
-		margin-top: 220px;
+		margin-top: 200px;
 	}
 	body {
 		font-size: 16px;
